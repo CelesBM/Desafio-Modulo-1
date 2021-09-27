@@ -1,0 +1,41 @@
+[   {
+    "title": "El padrino",
+    "rating": 9.8,
+    "tags": ["mafia", "drama", "crimen", "policial"] 
+    }, {
+    "title": "Jocker",
+    "rating": 7.9,
+    "tags": ["suspenso", "drama", "crimen", "thriller psicológico"]
+    }, {
+    "title": "Forrest gump",
+    "rating": 8.8,
+    "tags": ["comedia", "romántico", "drama"]
+    }, {
+    "title": "500 days of summer",
+    "rating": 6.3,
+    "tags": ["romántico", "comedia", "drama"]
+    }, { 
+    "title": "Contratiempo", 
+    "rating": 5.7,
+    "tags": ["misterio", "crimen"]
+    }, {
+    "title": "Dunkirk",
+    "rating": 8.2,
+    "tags": ["guerra", "acción", "drama", "ficción histórica"]
+    }, {
+    "title": "Titanic", 
+    "rating": 9.1,
+    "tags": ["romántico", "drama", "ficción histórica"] 
+    }, {
+    "title": "El niño del pijama de rayas",
+    "rating": 9.4,
+    "tags": ["drama", "ficción histórica"] 
+    }, {
+    "title": "El exorcista",
+    "rating": 8.0,
+    "tags": ["terror", "suspenso", "sobrenatural"]
+    }, {
+    "title": "El señor de los anillos: el retorno del rey",
+    "rating": 8.7,
+    "tags": ["novela", "fantasía heroica"]
+    }   ]
