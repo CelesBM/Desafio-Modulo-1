@@ -42,20 +42,27 @@ const sortBy = function (propiedad, arrayDePelis) {
     return sort;
 }
 
+const noFormat = function(arrayDePelis) {
+    
+    arrayDePelis = getAll();
+    const arrayNoFormat = JSON.stringify(arrayDePelis);
+    return arrayNoFormat;
+}
+      
 exports.searchByCriteria = function (criterios) {
-            // comienzo un array vacio que voy a empezar a rellenar con las respuestas de las funciones
+           
     let tmp = getAll();
           
     if (criterios.search) {
         console.log("hay search y es", criterios.search);
-        tmp = searchByTitle(criterios.searchTitle, tmp);
+        tmp = searchByTitle(criterios.search, tmp);
     } else {
         console.log("no hay search");
             }
            
-    if (criterios.search) {
+    if (criterios.tag) {
         console.log("hay search y es", criterios.search);
-        tmp = searchByTag(criterios.searchTag, tmp);
+        tmp = searchByTag(criterios.tag, tmp);
     } else {
         console.log("no hay search");
             }
@@ -66,6 +73,7 @@ exports.searchByCriteria = function (criterios) {
     } else {
         console.log("no hay sort");
  }
-            // .. y asi
-            return tmp;
-          };
+    if (criterios.hasOwnProperty("no-format")) {
+        tmp = noFormat(tmp);        
+    return tmp;
+}};
