@@ -27,18 +27,17 @@ const searchByTitle = function(titulo, arrayDePelis) {
     return filtrarTag;
 };
 
-    const sortBy = function (propiedad, arrayDePelis) {
+const sortBy = function (propiedad, arrayDePelis) {
 
     arrayDePelis = getAll();
-        
     const sort = arrayDePelis.sort(function (a, b) {
-    if (a[propiedad] > b[propiedad]) {
-    return 1;
+        if (a[propiedad] > b[propiedad]) {
+        return 1;
     }
-    if (a[propiedad] < b[propiedad]) {
-    return -1;
+        if (a[propiedad] < b[propiedad]) {
+        return -1;
     }
-    return 0;
+        return 0;
   });
     return sort;
 }
