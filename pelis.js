@@ -1,30 +1,31 @@
 const fs = require ("fs");
 
 const getAll = function(){
-const pelisJson = fs.readFileSync(__dirname + "/pelis.json");
-const pelisParseadas = JSON.parse(pelisJson);
-return pelisParseadas;
+    
+    const pelisJson = fs.readFileSync(__dirname + "/pelis.json");
+    const pelisParseadas = JSON.parse(pelisJson);
+    return pelisParseadas;
 }
 
 const searchByTitle = function(titulo, arrayDePelis) {
 
     arrayDePelis = getAll();
-    
-const filtrarTitulo = arrayDePelis.filter(function(item){
-const buscarTitulo = item.title.includes(titulo);
-return true; })
-return buscarTitulo; };
-    
-
+    const filtrarTitulo = arrayDePelis.filter(function(item){
+        if(item.title.includes(titulo)){
+        return item}
+    })
+    return filtrarTitulo; 
+};
+ 
  const searchByTag = function(texto, arrayDePelis) {
 
     arrayDePelis = getAll();
     const filtrarTag = arrayDePelis.filter(function(item){
-    const buscarTag = item.tags.includes(texto);
-    return true;   
-    })
-    return buscarTag;
-    };
+        if(item.tags.includes(texto)){
+        return item;}
+        })
+    return filtrarTag;
+};
 
     const sortBy = function (propiedad, arrayDePelis) {
 
