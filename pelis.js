@@ -9,7 +9,6 @@ const getAll = function(){
 
 const searchByTitle = function(titulo, arrayDePelis) {
 
-    arrayDePelis = getAll();
     const filtrarTitulo = arrayDePelis.filter(function(item){
         if(item.title.includes(titulo)){
         return item}
@@ -19,7 +18,6 @@ const searchByTitle = function(titulo, arrayDePelis) {
  
  const searchByTag = function(texto, arrayDePelis) {
 
-    arrayDePelis = getAll();
     const filtrarTag = arrayDePelis.filter(function(item){
         if(item.tags.includes(texto)){
         return item;}
@@ -30,7 +28,6 @@ const searchByTitle = function(titulo, arrayDePelis) {
 
 const sortBy = function (propiedad, arrayDePelis) {
 
-    arrayDePelis = getAll();
     const sort = arrayDePelis.sort(function (a, b) {
         if (a[propiedad] > b[propiedad]) {
         return 1;
@@ -45,7 +42,6 @@ const sortBy = function (propiedad, arrayDePelis) {
 
 const noFormat = function(arrayDePelis) {
     
-    arrayDePelis = getAll();
     const arrayNoFormat = JSON.stringify(arrayDePelis);
     return arrayNoFormat;
 }
