@@ -1,11 +1,11 @@
 const fs = require ("fs");
 
 const getAll = function(){
-    
+
     const pelisJson = fs.readFileSync(__dirname + "/pelis.json");
     const pelisParseadas = JSON.parse(pelisJson);
     return pelisParseadas;
-}
+};
 
 const searchByTitle = function(titulo, arrayDePelis) {
 
@@ -23,9 +23,10 @@ const searchByTitle = function(titulo, arrayDePelis) {
     const filtrarTag = arrayDePelis.filter(function(item){
         if(item.tags.includes(texto)){
         return item;}
-        })
+    })
     return filtrarTag;
 };
+
 
 const sortBy = function (propiedad, arrayDePelis) {
 
@@ -54,26 +55,23 @@ exports.searchByCriteria = function (criterios) {
     let tmp = getAll();
           
     if (criterios.search) {
-        console.log("hay search y es", criterios.search);
         tmp = searchByTitle(criterios.search, tmp);
     } else {
-        console.log("no hay search");
             }
            
     if (criterios.tag) {
-        console.log("hay search y es", criterios.search);
         tmp = searchByTag(criterios.tag, tmp);
     } else {
-        console.log("no hay search");
             }
           
     if (criterios.sort) {
         tmp = sortBy(criterios.sort, tmp);
-        console.log("hay sort y es", criterios.sort);
     } else {
-        console.log("no hay sort");
+        
  }
     if (criterios.hasOwnProperty("no-format")) {
         tmp = noFormat(tmp);        
+    
+}
     return tmp;
-}};
+};
